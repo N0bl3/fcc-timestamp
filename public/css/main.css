@@ -1,204 +1,282 @@
-/********* Fonts **********/
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
 
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Roboto'), local('Roboto-Regular'), url('../fonts/Roboto-Regular.ttf') format('truetype');
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
 }
 
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  src: local('Roboto Medium'), local('Roboto-Medium'), url('../fonts/Roboto-Medium.ttf') format('truetype');
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
 }
 
-/****** Main Styling ******/
-
-body {
-	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
-	margin: 0;
-	padding: 0;
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
 }
 
-header {
-	color: #00BCD4;
-	height: 56px;
-	margin: 0 0 14px 0;
-	text-align: center;
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
 }
 
-p {
-	margin: 8px 0 0 0;
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
 }
 
-.container p {
-	text-align: center;
-	padding: 0;
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
 }
 
-/****** Header Styling ******/
+/*
+ * Allow only vertical resizing of textareas.
+ */
 
-header p {
-	margin: 16px 0 5px 0;
+textarea {
+    resize: vertical;
 }
 
-.menu {
-	text-decoration: none;
-	padding: 6px;
-	margin: 0;
-	color: #727272;
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
 }
 
-.menu:visited {
-	color: #727272;
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
 }
 
-.menu:hover {
-	color: #FFA000;
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }
 
-.menu:active {
-	color: #FF630D;
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
 }
 
-header a ~ p {
-	margin: 0;
-	padding: 0;
-	display: inline;
-	color: #ECEFF1;
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
 }
 
-#display-name {
-	font-weight: 400;
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
 }
 
-/****** Login Styling ******/
-
-.login {
-	margin: 86px auto 0 auto;
-	text-align: center;
+.clearfix:after {
+    clear: both;
 }
 
-#login-btn {
-	width: 225px;
-	padding: 7px 5px;
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
 }
 
-.btn p {
-	margin: 8px 0 0 0;
-	padding: 0;
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
 }
 
-.btn > img {
-	float: left;
-	margin-left: 10px
-}
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
 
-/****** Logo Div Styling ******/
+@media print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    *:first-line {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
 
-img {
-	margin: 0 auto;
-	display: block;
-}
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
 
-.clementine-text { /* Styling for the Clementine.js text */
-	padding: 0;
-	margin: -25px 0 0 0;
-	font-weight: 500;
-	font-size: 60px;
-	color: #FFA000;
-}
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
 
-/****** Click Styling ******/
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
 
-.btn-container {	/* Styling for the div that contains the buttons */
-	margin: -10px auto 0 auto;
-	text-align: center;
-}
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
 
-.btn {	/* Styling for buttons */
-	margin: 0 8px;
-	color: white;
-	background-color: #00BCD4;
-	display: inline-block;
-	border: 0;
-	font-size: 14px;
-	border-radius: 3px;
-	padding: 10px 5px;
-	width: 100px;
-	font-weight: 500;
-}
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
 
-.btn:focus {	/* Remove outline when hovering over button */
-	outline: none;
-}
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
 
-.btn:active {	/* Scale the button down by 10% when clicking on button */
-	transform: scale(0.9, 0.9);
-	-webkit-transform: scale(0.9, 0.9);
-	-moz-transform: scale(0.9, 0.9);
-}
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
 
-.btn-delete {	/* Styling for delete button */
-	background-color: #ECEFF1;
-	color: #212121;
-}
+    thead {
+        display: table-header-group;
+    }
 
-#click-nbr {
-	font-weight: 400;
-}
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
 
-/****** Profile Styling ******/
+    img {
+        max-width: 100% !important;
+    }
 
-.github-profile {
-	width: 350px;
-	height: 200px;
-	border-radius: 3px;
-	margin: 86px auto 0 auto;
-	background-color: #EEE;
-	text-align: center;
-	color: #000;
-}
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
 
-.github-profile p:first-child {
-	padding-top: 16px;
-}
-
-.github-profile p:nth-child(5) {
-	margin-bottom: 16px
-}
-
-.github-profile p {
-	margin: 0 0 0 16px;
-	text-align: left;
-}
-
-.profile-value {
-	font-weight: 400;
-}
-
-span {
-	font-weight: 500;
-}
-
-.github-profile > img {
-	padding-top: 16px;
-	margin-bottom: 16px;
-}
-
-.github-profile .menu:hover {
-	color: #FFA000;
-}
-
-.github-profile .menu:active {
-	color: #FF630D;
-}
-
-#menu-divide {
-	color: #FFFFFF;
-	display: inline;
-	margin: 0;
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
 }
