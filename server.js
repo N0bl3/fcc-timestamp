@@ -7,7 +7,7 @@ var app = express();
 var port = process.env.PORT || 8080;
 
 app.get("/", function(req,res){
-	res.end("Welcome! Pass a date in the url");	
+	res.end("Welcome! Pass a date in the url.<br>You can try <a href='https://fcc-timestamp-n0bl3.herokuapp.com/June%2023,2018'>June 23, 2018</a> or <a href='https://fcc-timestamp-n0bl3.herokuapp.com/1345678910'>timestamp unix style (1345678910)</a>");	
 });
 
 app.get("/:string", function(req, res){
