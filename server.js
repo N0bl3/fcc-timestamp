@@ -6,10 +6,10 @@ var app = express();
 
 var port = process.env.PORT || 8080;
 
-app.set("views", __dirname + 'public');
+app.use(express.static(__dirname + '/public'));
 
 app.get("/", function(req,res){
-	res.render("index");	
+	res.render("index.html");	
 });
 
 app.get("/:string", function(req, res){
