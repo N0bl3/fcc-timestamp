@@ -9,7 +9,8 @@
     "javascript"
   ],
   "scripts": {
-  "start": "node server.js"
+    "prestart": "npm install",
+    "start": "node server.js"
   },
   "author": "Alexandre Noble",
   "license": "MIT",
