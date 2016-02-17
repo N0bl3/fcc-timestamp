@@ -6,6 +6,10 @@ var app = express();
 
 var port = process.env.PORT || 8080;
 
+app.get("/", function(req,res){
+	res.end("Welcome! Pass a date in the url");	
+});
+
 app.get("/:string", function(req, res){
 	
 	function renderDate(timestamp, date){
